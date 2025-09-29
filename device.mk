@@ -45,8 +45,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     sensors.r8s
+
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH) hardware/qcom/wlan/legacy hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH) \
+    hardware/qcom/wlan \
+    hardware/qcom/wlan/legacy \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
 
 # Inherit from common
 $(call inherit-product, device/samsung/universal9830-common/device-common.mk)
